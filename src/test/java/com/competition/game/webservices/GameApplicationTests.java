@@ -30,8 +30,8 @@ import com.competition.game.webservices.service.TaskStatusService;
 
 @RunWith(SpringRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@SpringBootTest(classes = CompetitionGameApplication.class)
-public class CompetitionGameApplicationTests {
+@SpringBootTest(classes = GameApplication.class)
+public class GameApplicationTests {
 
 	@Autowired
 	private LanguageService languagesService;
@@ -83,39 +83,15 @@ public class CompetitionGameApplicationTests {
 		Language task = new Language();
 		return task;
 	}
-
-	@Test
-	public void getEmployee() throws Exception {
-		// save
-		/*
-		 * Language lang = languagesRepository.saveAndFlush(languages);
-		 * 
-		 * List<Language> langs= languagesRepository.findAll();
-		 * 
-		 * Task task = new Task();
-		 * task.setDescription("Swap two numbers without using third variable");
-		 * task.setLanguage(lang);
-		 * 
-		 * 
-		 * // fetch the inserted record
-		 * restLanguagesMockMvc.perform(MockMvcRequestBuilders.get(
-		 * "/api/v1/getAllLanguages", lang.getName()))
-		 * .andExpect(MockMvcResultMatchers.status().isOk());
-		 */
-	}
 	
 	@Test
 	public void generateData() throws Exception {
 			
 		List<Language> langs= languagesRepository.findAll();
-		
-		TaskStatus task = new TaskStatus();
-		
 		for (Language language : langs) {
-			task.setLanguage(language);
-			System.out.println(task.toString());
-			taskRepository.save(task);
-			System.out.println(task.toString());
+			
+			System.out.println(language.toString());
+	
 		}
 	}
 }

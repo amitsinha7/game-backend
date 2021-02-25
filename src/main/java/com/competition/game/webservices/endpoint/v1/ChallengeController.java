@@ -68,13 +68,14 @@ public class ChallengeController {
 
 	// Constructor for Integration Testing
 	public ChallengeController(LanguageService languagesService, RextesterService rextesterService,
-			TaskStatusService taskStatusService, PlayerService playerService,
+			TaskStatusService taskStatusService, PlayerService playerService,Helper helper,
 			PreLoadedTaskService preLoadedTaskService) {
 		this.languagesService = languagesService;
 		this.rextesterService = rextesterService;
 		this.playerService = playerService;
 		this.taskStatusService = taskStatusService;
 		this.preLoadedTaskService = preLoadedTaskService;
+		this.helper = helper;
 	}
 
 	// Create New Player

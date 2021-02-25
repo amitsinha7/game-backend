@@ -13,16 +13,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableAsync
-public class CompetitionGameApplication {
+public class GameApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CompetitionGameApplication.class, args);
+		SpringApplication.run(GameApplication.class, args);
 	}
 
 	@Bean
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.competition.game.rest.webservices.endpoint")).build();
+				.apis(RequestHandlerSelectors.basePackage("com.competition.game.webservices.endpoint")).build();
 	}
 
 }

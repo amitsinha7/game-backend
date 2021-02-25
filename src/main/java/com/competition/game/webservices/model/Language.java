@@ -29,7 +29,7 @@ public class Language implements Serializable {
 	@Column(name = "number")
 	private int number;
 
-	@OneToMany(mappedBy = "language", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "language")
 	private Set<TaskStatus> tasks;
 
 	public Language() {

@@ -5,10 +5,7 @@ import java.util.List;
 import com.competition.game.webservices.model.Language;
 import com.competition.game.webservices.model.Player;
 import com.competition.game.webservices.model.PreLoadedTask;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-@JsonInclude(Include.NON_NULL)
 public class ResponseDTO {
 
 	private ErrorInfo errorInfo;
